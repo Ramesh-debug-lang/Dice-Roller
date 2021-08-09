@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button roll;
     ImageView result;
-    Switch aSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         roll=findViewById(R.id.roll);
         result=findViewById(R.id.num);
-        aSwitch=findViewById(R.id.switch1);
-        aSwitch.setChecked(true);
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,26 +44,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    roll.setEnabled(true);
-                    result.setEnabled(true);
-                    aSwitch.setTextOff("OFF");
-                    aSwitch.setText("ON");
-                }else{
-                    roll.setEnabled(false);
-                    result.setEnabled(false);
-                    aSwitch.setTextOn("ON");
-                    aSwitch.setText("OFF");
-                }
-            }
-        });
+
     }
 
     public void goToTwo(View view) {
-        Intent intent=new Intent(this, Two.class);
+        Intent intent=new Intent(this, Birthday.class);
         startActivity(intent);
     }
 }
