@@ -66,6 +66,7 @@
         android:textColor="@color/purple_500"
         android:onClick="goToTwo"
         android:text="Birthday Card"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
